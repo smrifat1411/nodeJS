@@ -1,0 +1,18 @@
+{
+  "name": "node_basic",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/smrifat1411/nodeJS.git",
+  "author": "Rifat",
+  "license": "MIT",
+  "private": false,
+
+  "scripts": {
+    "start":"node app.js",
+    "dev":"nodemon app.js"
+  },
+
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
