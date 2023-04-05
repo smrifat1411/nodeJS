@@ -1,29 +1,25 @@
-const http = require("http");
+const express = require("express");
 
-const server = http.createServer((req, res) => {
-  const url = req.url;
-  // Home Page
-  if (url === "/") {
-    res.writeHead(200, {
-      "content-type": "text/html",
-    });
-    res.write("<h1>Home Page</h1>");
-    res.end();
-  } else if (url === "/contact") {
-    res.writeHead(200, {
-      "content-type": "text/html",
-    });
-    res.write("<h1>Contact Page</h1>");
-    res.end();
-  }
-  // About Page
-  else {
-    res.writeHead(404, {
-      "content-type": "text/html",
-    });
-    res.write("<h1>Request Page Not Found</h1>");
-    res.end();
-  }
+const app = express();
+
+// app.get
+// app.post
+// app.put
+// app.delete
+// app.all
+// app.use
+// app.listen
+
+app.get("/",(req,res)=>{
+  
+  res.status(200).send("Home Page")
+})
+
+app.get("*",(req,res)=>{
+  res.status(404).send("Your requested page isn't found")
+})
+
+
+app.listen(4000, () => {
+  console.log("server is listening on port 4000");
 });
-
-server.listen(2000);

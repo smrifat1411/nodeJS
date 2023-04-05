@@ -8,7 +8,7 @@
   "private": false,
   "scripts": {
     "start": "node app.js",
-    "dev": "n js"
+    "dev": "nodemon app.js"
   },
   "devDependencies": {
     "nodemon": "^2.0.22"
@@ -17,4 +17,3 @@
     "express": "^4.18.2"
   }
 }
-
